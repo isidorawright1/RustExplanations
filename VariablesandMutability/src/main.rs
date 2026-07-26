@@ -108,6 +108,7 @@ use results and error handling. next chapter in rust book
 use functions and write test cases for them
 
 */
+mod parse_config;
 
 use rand::random_range;
 use std::io;
@@ -140,6 +141,13 @@ fn handle_exceptions(result: Result<i32, ParseIntError>, number_guessed: &mut i3
 
 }
 
+/*
+use llm to review code and optimize it for performance and stability and best practices
+at least 2 models
+write a summary of recommendation and agree or not
+use cargo doc to generate documentation and review
+*/
+
 fn main() {
 
     //store the secret number in a variable
@@ -151,8 +159,10 @@ fn main() {
         //prompt user for guess
         print!("Enter a number between 0 and 10 (press q to quit): ");
         let mut input1 = String::new();
+
         //flush
         io::stdout().flush().unwrap();
+
         //error output if read failed
         io::stdin().read_line(&mut input1).expect("Failed to read line for the user number guess");
 
